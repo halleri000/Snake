@@ -1,22 +1,31 @@
 import javax.swing.*;
 import java.awt.*;
 
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionListener;
 
 
 public class Board extends JPanel  {
 
     Player player;
-    Food food;
-    Timer timer;
+    Enemy enemy;
+
     Game game;
 
     public Board(Game game){
         this.game = game;
         setPreferredSize(new Dimension(1024, 768));
         setBackground(Color.BLACK);
-        //timer = new Timer(1000 / 60, this);
-        timer.start();
+
+    }
+
+    public void setUp(){
+        player = new Player(this);
+    }
+
+
+    public void paintComponent (Graphics g){
+        super.paintComponent(g);
+        player.paint(g);
     }
 
 }

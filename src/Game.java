@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class Game  extends JFrame{
 
@@ -16,7 +14,13 @@ public class Game  extends JFrame{
         board = new Board(this);
 
         add(board);
+        pack();
+        board.setUp();
 
+    }
+    public static void main(String[] args){
+
+        new Game();
     }
 
 
