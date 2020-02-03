@@ -20,12 +20,14 @@ public class Board extends JPanel  {
 
     public void setUp(){
         player = new Player(this);
+        enemy = new Enemy();
     }
 
 
     public void paintComponent (Graphics g){
         super.paintComponent(g);
         player.paint(g);
+        enemy.paint(g);
     }
 
 }
