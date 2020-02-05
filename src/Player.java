@@ -3,13 +3,22 @@ public class Player {
 
     int x, y;
     final int width = 20, height = 40;
-    double dx = 4, dy = 4;
+    double dx = 3, dy = 4;
+    Game game;
+    Board board;
 
     public Player(Board board){
-
-            x = board.getWidth() / 2;
-            y = board.getHeight() / 2;
+        this.x = x - width/2;
+        this.y= y - height/2;
     }
+
+    public void move(){
+
+        x+=dx;
+        y+=dy;
+        }
+
+
 
 
     public void paint(Graphics g){
